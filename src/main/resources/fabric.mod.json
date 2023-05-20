@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+
+	"id": "ask-ai",
+	"version": "${ version }",
+
+	"name": "Ask AI",
+	"description": "Quickly get help from AI with a chat command.",
+	"authors": [ {
+		"name": "viral32111",
+		"contact": {
+			"homepage": "https://viral32111.com",
+			"email": "contact@viral32111.com"
+		}
+	} ],
+	"contributors": [],
+	"contact": {
+		"homepage": "https://github.com/viral32111/ask-ai",
+		"issues": "https://github.com/viral32111/ask-ai",
+		"sources": "https://github.com/viral32111/ask-ai"
+	},
+	"license": "AGPL-3.0-only",
+
+	"environment": "*",
+	"entrypoints": {
+		"main": [ {
+			"adapter": "kotlin",
+			"value": "com.viral32111.askai.AskAI"
+		} ]
+	},
+	"mixins": [
+		"ask-ai.mixins.json"
+	],
+
+	"depends": {
+		"java": ">=${ java }",
+		"minecraft": ">=${ minecraft }",
+		"fabricloader": ">=${ fabricloader }",
+		"fabric-api": ">=${ fabric_api }",
+		"fabric-language-kotlin": ">=${ fabric_language_kotlin }"
+	},
+	"suggests": {}
+
+}
