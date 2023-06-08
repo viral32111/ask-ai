@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 
-	"id": "ask-ai",
+	"id": "askai",
 	"version": "${ version }",
 
 	"name": "Ask AI",
@@ -21,16 +21,17 @@
 	},
 	"license": "AGPL-3.0-only",
 
-	"environment": "*",
+	"environment": "server",
 	"entrypoints": {
-		"main": [ {
+		"server": [ {
 			"adapter": "kotlin",
 			"value": "com.viral32111.askai.AskAI"
 		} ]
 	},
-	"mixins": [
-		"ask-ai.mixins.json"
-	],
+	"mixins": [ {
+		"environment": "server",
+		"config": "askai.mixins.json"
+	} ],
 
 	"depends": {
 		"java": ">=${ java }",
