@@ -5,7 +5,7 @@
 	"version": "${ version }",
 
 	"name": "Ask AI",
-	"description": "Quickly get help from AI with a chat command.",
+	"description": "Quickly get help from AI.",
 	"authors": [ {
 		"name": "viral32111",
 		"contact": {
