@@ -86,7 +86,7 @@ tasks {
 				"minecraft" to project.extra[ "minecraft_version" ] as String,
 				"fabricloader" to project.extra[ "loader_version" ] as String,
 				"fabric_api" to project.extra[ "fabric_version" ] as String,
-				"fabric_language_kotlin" to project.extra[ "fabric_language_kotlin_version" ] as String,
+				"fabric_language_kotlin" to project.extra[ "fabric_language_kotlin_version" ] as String
 			) )
 		}
 
