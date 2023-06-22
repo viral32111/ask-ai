@@ -25,3 +25,4 @@ run/
 # Gradle
 .gradle/
 !gradle/wrapper/gradle-wrapper.jar
+local.properties
