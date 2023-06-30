@@ -28,10 +28,7 @@
 			"value": "com.viral32111.askai.AskAI"
 		} ]
 	},
-	"mixins": [ {
-		"environment": "server",
-		"config": "askai.mixins.json"
-	} ],
+	"mixins": [],
 
 	"depends": {
 		"java": ">=${ java }",
