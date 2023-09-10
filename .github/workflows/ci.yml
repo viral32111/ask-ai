@@ -3,12 +3,7 @@ name: CI
 on:
   push:
     paths:
-      - 'gradle/**/*'
-      - 'gradle*'
-      - 'src/**/*'
-      - '*.gradle.kts'
-      - 'gradle.properties'
-      - '.github/workflows/ci.yml'
+      - '**'
     branches:
       - '**'
     tags:
@@ -16,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  ARTIFACT_NAME: askai
+  ARTIFACT_NAME: ask-ai
 
 jobs:
   build:
