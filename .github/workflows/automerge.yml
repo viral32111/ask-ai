@@ -1,34 +1,34 @@
-name: CodeQL
+name: Dependabot Auto-Merge
 
 on:
-  push:
-    paths:
-     - '**'
-    branches:
-     - '**'
-  schedule:
-    - cron: '0 0 * * 0'
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+  workflow_dispatch:
 
 jobs:
-  codeql:
-    name: CodeQL
+  dependabot-auto-merge:
+    name: Dependabot Auto-Merge
     runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
     permissions:
-      actions: read
-      contents: read
-      packages: read
-      security-events: write
+      contents: write
+      pull-requests: write
+      issues: write
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
         with:
-          languages: javascript
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Auto-build
-        uses: github/codeql-action/autobuild@v2
-
-      - name: Perform CodeQL analysis
-        uses: github/codeql-action/analyze@v2
+      - name: Enable auto-merge for pull request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --auto --rebase ${{ github.event.pull_request.html_url }}
