@@ -47,7 +47,7 @@ dependencies {
 	transitiveInclude( implementation( "io.ktor:ktor-client-serialization:2.3.7" )!! )
 	transitiveInclude( implementation( "io.ktor:ktor-client-serialization-jvm:2.3.7" )!! )
 	transitiveInclude( implementation( "io.ktor:ktor-client-content-negotiation:2.3.6" )!! )
-	transitiveInclude( implementation( "io.ktor:ktor-serialization-kotlinx-json:2.3.5" )!! )
+	transitiveInclude( implementation( "io.ktor:ktor-serialization-kotlinx-json:2.3.7" )!! )
 
 	transitiveInclude.resolvedConfiguration.resolvedArtifacts.forEach {
 		include( it.moduleVersion.id.toString() )
