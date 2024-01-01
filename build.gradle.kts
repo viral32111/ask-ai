@@ -37,7 +37,7 @@ dependencies {
 	modImplementation( "net.fabricmc", "fabric-language-kotlin", project.extra[ "fabric_language_kotlin_version" ] as String )
 
 	// Kotlin serialization
-	implementation( "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0" )
+	implementation( "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2" )
 
 	// Ktor client
 	transitiveInclude( implementation( "io.ktor:ktor-client-core:2.3.7" )!! )
