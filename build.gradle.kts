@@ -41,7 +41,7 @@ dependencies {
 
 	// Ktor client
 	transitiveInclude( implementation( "io.ktor:ktor-client-core:2.3.7" )!! )
-	transitiveInclude( implementation( "io.ktor:ktor-client-cio:2.3.7" )!! )
+	transitiveInclude( implementation( "io.ktor:ktor-client-cio:2.3.8" )!! )
 	transitiveInclude( implementation( "io.ktor:ktor-client-json:2.3.7" )!! )
 	transitiveInclude( implementation( "io.ktor:ktor-client-json-jvm:2.3.7" )!! )
 	transitiveInclude( implementation( "io.ktor:ktor-client-serialization:2.3.7" )!! )
