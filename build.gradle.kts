@@ -40,7 +40,7 @@ dependencies {
 	implementation( "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2" )
 
 	// Ktor client
-	transitiveInclude( implementation( "io.ktor:ktor-client-core:2.3.7" )!! )
+	transitiveInclude( implementation( "io.ktor:ktor-client-core:2.3.8" )!! )
 	transitiveInclude( implementation( "io.ktor:ktor-client-cio:2.3.8" )!! )
 	transitiveInclude( implementation( "io.ktor:ktor-client-json:2.3.8" )!! )
 	transitiveInclude( implementation( "io.ktor:ktor-client-json-jvm:2.3.8" )!! )
